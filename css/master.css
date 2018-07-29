@@ -1,0 +1,267 @@
+/*
+Display template for every page.
+
+Includes:
+- Navigation Bar
+- Container (holds sidebar and content)
+- Sidebar
+- Content (primary)
+
+*/
+
+/* Body */
+body
+{
+  margin: 0;
+  font-family: 'Roboto', 'Noto', sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+/*
+Navigation Bar
+
+Includes:
+- Youtube logo
+- Search input and button
+- Sample control icons
+
+*/
+.navbar
+{
+  display: grid;
+  grid-template-columns: 240px 1fr 200px;
+  grid-template-areas:
+    "control search account";
+
+  height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: #FFF;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12);
+
+  padding: 0 24px;
+  position: fixed;
+  z-index: 10;
+}
+
+.control
+{
+  display: flex;
+  align-items: center;
+
+  grid-area: control;
+}
+
+.control-menu
+{
+  margin: 0 26px 0 0;
+}
+
+.control-logo
+{
+  width: 78px;
+}
+
+.search
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: search;
+}
+
+.search-form
+{
+  display: grid;
+  grid-template-columns: 575px 65px;
+  grid-template-areas:
+    "search-input search-btn";
+}
+
+.search-input
+{
+  grid-area: search-input;
+
+  height: 28px;
+  width: 98.4%;
+
+  font-size: 16px;
+  font-family: Roboto;
+  border: 1px solid #CBCBCB;
+  border-radius: 2px 0 0 2px;
+  border-right: none;
+
+  padding: 0 0 0 10px;
+}
+
+.search-btn
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: search-btn;
+
+  height: 32px;
+  width: 100%;
+
+  background-color: #F8F8F8;
+  border: 1px solid #CBCBCB;
+  border-radius: 0 2px 2px 0;
+
+  padding: 1px 6px;
+}
+
+.account
+{
+  display: flex;
+  align-items: center;
+
+  grid-area: account;
+}
+
+.account-item
+{
+  padding: 8px;
+  margin: 0 8px 0 0;
+}
+
+/*
+Primary Content
+
+Includes:
+- Container to hold sidebar and content (primary)
+
+*/
+.container
+{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "sidebar content";
+
+  padding: 56px 0 0 0;
+}
+
+/*
+Sidebar
+
+Includes:
+- item container (holds items with item title)
+
+*/
+.sidebar
+{
+  grid-area: sidebar;
+
+  height: 100vh;
+  width: 240px;
+
+  background-color: #F5F5F5;
+  border-bottom: 1px solid black;
+
+  padding: 56px 0 0 0;
+  position: fixed;
+}
+
+.item-container
+{
+  border-bottom: 1px solid #EDEDED;
+
+  padding: 12px 0;
+}
+
+.item-title
+{
+  display: flex;
+  align-items: center;
+
+  height: 33px;
+
+  color: #878787;
+  font-size: 14px;
+
+  padding: 0 24px;
+}
+
+.item
+{
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+
+  font-size: 14px;
+
+  padding: 0 24px;
+}
+
+.item:hover
+{
+  background-color: #E5E5E5;
+  cursor: pointer;
+}
+
+.item-img
+{
+  margin: 0 27px 0 0;
+}
+
+.item-hidden
+{
+  display: none;
+}
+
+
+
+.hide
+{
+  display: none;
+}
+
+.full
+{
+  margin: 0 0 0 240px;
+}
+
+/*
+Video Content
+
+Includes:
+- Content (container to hold videos)
+
+*/
+.content
+{
+  display: grid;
+  grid-template-columns: 1fr 1284px 1fr;
+  grid-template-areas:
+    ". video-container .";
+
+  grid-area: content;
+
+  height: 100%;
+
+  background-color: #FAFAFA;
+
+  position: relative;
+}
+
+.video-container
+{
+  grid-area: video-container;
+}
+
+.divider
+{
+  height: 0;
+  width: 100%;
+
+  border-top: 1px solid #ededed;
+}
